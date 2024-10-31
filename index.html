@@ -4,23 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobil uyumluluk için eklendi -->
     <title>Ana Sayfa</title>
+    <link id="favicon" rel="icon" href="resources/beyaz-ikon.png" type="image/x-icon"> <!-- Varsayılan favicon -->
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function setFavicon() {
+                const favicon = document.getElementById('favicon');
+                const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+                // Temaya göre favicon'u ayarla
+                if (darkModeMediaQuery.matches) {
+                    favicon.href = 'resources/siyah-ikon.png'; // Karanlık tema için favicon
+                } else {
+                    favicon.href = 'resources/beyaz-ikon.png'; // Aydınlık tema için favicon
+                }
+            }
+
+            // Sayfa yüklendiğinde ve tema değiştiğinde favicon'u ayarla
+            setFavicon();
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
+        });
+    </script>
 </head>
 <body>
     <h1>Ana Sayfa</h1>
     <p>Aşağıdaki butonlardan hangi dosyaya erişmek istediğinizi seçin.</p>
     <div class="button-container">
-        <!-- 1. Buton tarih-ornek-soru.html sayfasına yönlendirecek -->
-        <button class="button" onclick=window.location.href='tarih-ornek-soru.html'>1. DÖNEM 1. ORTAK YAZILI SORU ÖRNEKLERİ</button>
-        
-        <!-- 2. Buton tarih-senaryo.html sayfasına yönlendirecek -->
-        <button class="button" onclick=window.location.href='tarih-senaryo.html'>SENARYO KONU SORU DAĞILIM TABLOLARI</button>
-    </div>
+        <!-- 1. Buton PDF dosyasını indirecek -->
+        <button class="button" onclick="window.location.href='/pdfler/tarih-ornek-soru.pdf'">1. DÖNEM 1. ORTAK YAZILI SORU ÖRNEKLERİ</button>
 
-        <!-- Foooter Text-->
+        <!-- 2. Buton PDF dosyasını indirecek -->
+        <button class="button" onclick="window.location.href='/pdfler/tarih-senaryo-konuları.pdf'">SENARYO KONU SORU DAĞILIM TABLOLARI</button>
+    </div>
+    <p>Butona tıklandığında otomatik olarak PDF dosyasını indirmeye başlar.</p>
+
+    <!-- Footer Text-->
     <div class="copyright-text">
-        <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
-    <p>1453wexty  - born for die!</p>
+        <p>1453wexty - born for die!</p>
     </div>
 </body>
 </html>

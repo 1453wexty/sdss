@@ -28,37 +28,68 @@ p {
 }
 
 .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Butonları dikey olarak ortalar */
+    display: flex; /* Flexbox kullanımı */
+    flex-direction: column; /* Dikey dizme */
+    align-items: center; /* Butonları ortalamak için */
     margin-top: 20px;
 }
 
 .button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    margin: 10px 0; /* Butonlar arası boşluk */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px; /* Dikey ve yatay padding */
+    font-size: 16px; /* Yazı boyutu */
+    color: white; /* Yazı rengi */
+    background-color: #007bff; /* Buton arka plan rengi */
+    border: none; /* Kenar boşluğu yok */
+    border-radius: 5px; /* Kenar yuvarlama */
+    margin: 10px 0; /* Butonlar arası dikey boşluk */
+    cursor: pointer; /* Fare ile üzerine gelindiğinde el simgesi */
+    transition: background-color 0.3s ease; /* Hover geçiş efekti */
     font-family: 'montserrat'; /* Buton yazı tipi */
-    width: 100%; /* Buton genişliği */
-    max-width: 300px; /* Maksimum buton genişliği */
+    white-space: nowrap; /* Yazının tek satırda görünmesi için */
 }
 
 .button:hover {
     background-color: #0056b3; /* Hover rengi */
 }
 
+.download-text {
+    font-size: 12px; /* Yazı boyutu küçük */
+    margin: 5px 0; /* Yazılar arası boşluk az */
+    text-align: center; /* Metni ortalama */
+}
+
 .copyright-text {
-    text-align: center;
+    text-align: center; /* Copyright metnini ortalama */
     margin-top: 20px; /* Üstte biraz boşluk */
 }
 
 .copyright-text > p {
-    margin-bottom: 0;
+    margin-bottom: 0; /* Alt boşluk yok */
     font-family: 'sequel'; /* Copyright metni yazı tipi */
+}
+
+/* Medya Sorguları ile Mobil ve Bilgisayar Görünümü Ayarlamaları */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column; /* Mobilde butonları dikey dizme */
+        align-items: center; /* Dikeyde butonları ortalama */
+    }
+    .button {
+        white-space: normal; /* Yazının iki satırda görünmesine izin ver */
+        line-height: 1.2; /* Satırlar arası boşluk */
+        width: 90%; /* Mobilde buton genişliğini artırma */
+        max-width: none; /* Mobilde maksimum genişliği kaldırma */
+        margin: 10px 0; /* Mobilde butonlar arası dikey boşluk */
+    }
+}
+
+@media (min-width: 769px) {
+    .button {
+        /* Bilgisayarda butonların genişliğini otomatik ayarlama */
+        width: auto; /* Genişliği otomatik ayarla */
+        max-width: none; /* Maksimum genişliği kaldırma */
+    }
+    .download-text {
+        margin-top: 5px; /* Butonların hemen altında yer alması için üst boşluk */
+    }
 }
