@@ -1,45 +1,64 @@
 @font-face {
     font-family: 'sequel'; /* Buraya bir isim verin */
     src: url('Sequel100Black-65.ttf'); /* .ttf dosyasının yolunu ekleyin */
-    }
+}
 
-    @font-face {
-        font-family: 'montserrat'; /* Buraya bir isim verin */
-        src: url('Montserrat-Bold.ttf'); /* .ttf dosyasının yolunu ekleyin */
-        }
+@font-face {
+    font-family: 'montserrat'; /* Buraya bir isim verin */
+    src: url('Montserrat-Bold.ttf'); /* .ttf dosyasının yolunu ekleyin */
+}
 
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        font-family: montserrat;
-        margin: 0; /* Varsayılan margin'i sıfırlamak için eklendi */
-    }
-    h1 {
-        color: #333;
-    }
-    .button-container {
-        margin-top: 20px;
-    }
-    .button {
-        padding: 10px 20px;
-        font-size: 16px;
-        color: white;
-        background-color: #007bff;
-        border: none;
-        border-radius: 5px;
-        margin: 0 10px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        font-family: montserrat;
-    }
-    .button:hover {
-        background-color: #0056b3;
-    }
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'montserrat'; /* Fontu güncelleyerek doğrudan tanımlama */
+    margin: 0; /* Varsayılan margin'i sıfırlamak için eklendi */
+    background-color: #f4f4f4; /* Arka plan rengi */
+}
 
-    .copyright-text > p {
-        margin-bottom: 0;
-        font-family: sequel;
-    }
+h1 {
+    color: #333;
+}
+
+p {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Butonları dikey olarak ortalar */
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0; /* Butonlar arası boşluk */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'montserrat'; /* Buton yazı tipi */
+    width: 100%; /* Buton genişliği */
+    max-width: 300px; /* Maksimum buton genişliği */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Hover rengi */
+}
+
+.copyright-text {
+    text-align: center;
+    margin-top: 20px; /* Üstte biraz boşluk */
+}
+
+.copyright-text > p {
+    margin-bottom: 0;
+    font-family: 'sequel'; /* Copyright metni yazı tipi */
+}
