@@ -1,0 +1,71 @@
+/* Yazı Tipleri */
+@font-face {
+    font-family: 'sequel';
+    src: url('../fonts/Sequel100Black-65.ttf');
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'helvetica-roman';
+    src: url('../fonts/HelveticaNeueRoman.otf');
+}
+
+
+body {
+    background-color: #fcf5eb;
+    font-family: 'helvetica', sans-serif;
+    margin: 0;
+}
+
+header {
+    position: fixed; /* Header'ı sabit yap */
+    top: 20px; /* Üst kısımdan boşluk bırak */
+    left: 50%;
+    transform: translateX(-50%); /* Header'ı ortala */
+    display: flex;
+    justify-content: space-between; /* Butonları en sağa yerleştir */
+    align-items: center; /* Dikey olarak ortala */
+    background-color: #d9d6c6; /* Header rengi ayarlandı */
+    z-index: 1000; /* Üstte kalmasını sağlar */
+    padding: 10px 20px; /* Kenarlara mesafe ekle */
+    border-radius: 15px; /* Kenarları kavisli */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    border: 2px solid black; /* Siyah kontur */
+    width: 80%; /* Genişliği %80 olarak ayarlandı */
+    transition: top 0.3s ease; /* Yumuşak geçiş efekti */
+}
+
+.isim {
+    font-size: 24px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+    font-family: sequel;
+}
+
+.header-buttons {
+    display: flex; /* Butonları yan yana diz */
+    gap: 10px; /* Butonlar arasına boşluk ekle */
+}
+
+.header-button {
+    padding: 10px 20px;
+    background-color: #5d8271; /* Buton rengi */
+    border: none; /* Kenar yok */
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff; /* Yazı rengi */
+    transition: background-color 0.3s; /* Geçiş efekti */
+    font-family: helvetica;
+}
+
+.header-button:hover {
+    background-color: #889d88; /* Üstüne gelindiğinde renk değişimi */
+}
+
+.content {
+    padding: 100px 20px 20px; /* Üst kısımda daha fazla boşluk ekle */
+    text-align: center;
+}

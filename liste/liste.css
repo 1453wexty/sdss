@@ -1,0 +1,170 @@
+/* Yazı Tipleri */
+@font-face {
+    font-family: 'sequel';
+    src: url('../fonts/Sequel100Black-65.ttf');
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'helvetica-roman';
+    src: url('../fonts/HelveticaNeueRoman.otf');
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 20px; /* Header'ın üstten uzaklığı */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9d6c6;
+    z-index: 1000;
+    padding: 10px 20px;
+    border-radius: 15px; /* Kenar yuvarlama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    border: 2px solid black; /* Kenar çizgisi */
+    width: 80%; /* Header genişliği */
+    transition: top 0.3s ease; /* Yukarı kayma geçiş efekti */
+}
+
+/* Site adı */
+.isim {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'sequel'; /* Belirtilen font */
+}
+
+/* Arama çubuğu */
+.search-bar {
+    flex-grow: 1; /* Alanı kaplaması için */
+    margin: 0 20px; /* Yanlardan boşluk bırak */
+    padding: 10px; /* İçerik için padding */
+    font-family: 'helvetica-roman'; /* Belirtilen font */
+}
+
+/* Buton grubu */
+.header-buttons {
+    display: flex;
+    gap: 10px; /* Butonlar arasında boşluk */
+}
+
+/* Buton stilleri */
+.header-button {
+    padding: 10px 20px;
+    background-color: #5d8271; /* Buton rengi */
+    border: none;
+    border-radius: 10px; /* Yuvarlak köşeler */
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s; /* Hover efekti */
+    font-family: 'helvetica-roman'; /* Belirtilen font */
+}
+
+.header-button:hover {
+    background-color: #889d88; /* Hover durumu */
+}
+
+/* İçerik alanı */
+.container {
+    margin-top: 80px; /* Header yüksekliği kadar boşluk bırakma */
+    padding: 20px; /* İçerik için padding */
+}
+
+/* Liste stilleri */
+.button-list {
+    list-style: none; /* Madde işaretlerini kaldır */
+    padding: 0; /* Padding kaldır */
+}
+
+.button-list li {
+    margin: 10px 0; /* Liste öğeleri arasındaki mesafe */
+}
+
+/* İçerik için ekstra boşluk */
+.content {
+    padding: 100px 20px 20px; /* Header altındaki boşluk */
+    text-align: center; /* Merkeze hizalama */
+}
+
+/* Genel Stil */
+
+body {
+    background-color: #fcf5eb;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.container p {
+    font-family: helvetica;
+}
+
+.search-bar {
+    font-family: 'Montserrat'; /* Yazı fontunu burada ayarlayın */
+    color: #000; /* Yazı rengini isterseniz buradan değiştirebilirsiniz */
+}
+
+.search-bar::placeholder {
+    font-family: 'Montserrat'; /* Fontu burada ayarlayın */
+    color: #aaa; /* İsterseniz placeholder rengini de değiştirebilirsiniz */
+}
+
+
+
+
+.button-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.button-list li {
+    margin: 10px 0;
+}
+
+.button-list a {
+    font-family: montserrat;
+}
+
+.button {
+    display: block;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #ffdac8;
+}
+
+.search-bar {
+    margin: 20px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    width: 350px; /* Daha geniş */
+    background-color: #fcf5eb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}

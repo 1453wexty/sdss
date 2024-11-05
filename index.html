@@ -2,45 +2,29 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobil uyumluluk için eklendi -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Sayfa</title>
-    <link id="favicon" rel="icon" href="resources/beyaz-ikon.png" type="image/x-icon"> <!-- Varsayılan favicon -->
+    <link id="favicon" rel="icon" href="resources/beyaz-icon.png?v=1" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            function setFavicon() {
-                const favicon = document.getElementById('favicon');
-                const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-                // Temaya göre favicon'u ayarla
-                if (darkModeMediaQuery.matches) {
-                    favicon.href = 'resources/siyah-ikon.png'; // Karanlık tema için favicon
-                } else {
-                    favicon.href = 'resources/beyaz-ikon.png'; // Aydınlık tema için favicon
-                }
-            }
-
-            // Sayfa yüklendiğinde ve tema değiştiğinde favicon'u ayarla
-            setFavicon();
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
-        });
-    </script>
 </head>
 <body>
+
+    <header id="header">
+        <div class="isim">Wex</div>
+        <div class="header-buttons">
+            <a href="liste/liste.html" class="header-button">Arama Bölümü</a>
+        </div>
+    </header>
+
     <h1>Ana Sayfa</h1>
-    <p>Aşağıdaki butonlardan hangi dosyaya erişmek istediğinizi seçin.</p>
+    <p>Erişmek istediğiniz içeriği seçin.</p>
     <div class="button-container">
-        <!-- 1. Buton PDF dosyasını indirecek -->
-        <button class="button" onclick="window.location.href='/pdfler/tarih-ornek-soru.pdf'">1. DÖNEM 1. ORTAK YAZILI SORU ÖRNEKLERİ</button>
-
-        <!-- 2. Buton PDF dosyasını indirecek -->
-        <button class="button" onclick="window.location.href='/pdfler/tarih-senaryo-konuları.pdf'">SENARYO KONU SORU DAĞILIM TABLOLARI</button>
+        <button class="button" onclick="window.location.href='liste/liste.html'">SINAVLAR İLE ALAKALI DOSYALARA BURADAN ULAŞABİLİRSİNİZ</button>
     </div>
-    <p>Butona tıklandığında otomatik olarak PDF dosyasını indirmeye başlar.</p>
 
-    <!-- Footer Text-->
     <div class="copyright-text">
         <p>1453wexty - born for die!</p>
     </div>
+
 </body>
 </html>

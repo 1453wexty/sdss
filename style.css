@@ -1,11 +1,69 @@
+/* Yazı Tipleri */
 @font-face {
-    font-family: 'sequel'; /* Buraya bir isim verin */
-    src: url('Sequel100Black-65.ttf'); /* .ttf dosyasının yolunu ekleyin */
+    font-family: 'sequel';
+    src: url('fonts/Sequel100Black-65.ttf');
 }
 
 @font-face {
-    font-family: 'montserrat'; /* Buraya bir isim verin */
-    src: url('Montserrat-Bold.ttf'); /* .ttf dosyasının yolunu ekleyin */
+    font-family: 'montserrat';
+    src: url('fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'helvetica-roman';
+    src: url('fonts/HelveticaNeueRoman.otf');
+}
+
+/* Genel Stil */
+/* Header */
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9d6c6;
+    z-index: 1000;
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid black;
+    width: 80%;
+    transition: top 0.3s ease;
+}
+
+.isim {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'sequel';
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-button {
+    padding: 10px 20px;
+    background-color: #5d8271;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+    font-family: 'helvetica-roman';
+}
+
+.header-button:hover {
+    background-color: #889d88;
+}
+
+/* İçerik için ekstra boşluk */
+.content {
+    padding: 100px 20px 20px;
+    text-align: center;
 }
 
 body {
@@ -14,9 +72,9 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-family: 'montserrat'; /* Fontu güncelleyerek doğrudan tanımlama */
-    margin: 0; /* Varsayılan margin'i sıfırlamak için eklendi */
-    background-color: #f4f4f4; /* Arka plan rengi */
+    font-family: 'montserrat';
+    margin: 0;
+    background-color: #fcf5eb;
 }
 
 h1 {
@@ -27,69 +85,88 @@ p {
     text-align: center;
 }
 
+/* Ana Sayfa Kutusu */
+.container {
+    background-color: #f0f0f5;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Butonlar */
+/* Butonlar */
 .button-container {
-    display: flex; /* Flexbox kullanımı */
-    flex-direction: column; /* Dikey dizme */
-    align-items: center; /* Butonları ortalamak için */
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Butonlar ile üst kısım arasındaki boşluğu azalt */
 }
 
 .button {
-    padding: 10px 20px; /* Dikey ve yatay padding */
+    background-color: #ffecff; /* Liste butonlarının rengi */
+    color: black; /* Yazı rengi */
+    padding: 10px; /* Buton boyutunu küçült */
+    margin: 5px 0; /* Butonlar arası mesafeyi azalt */
+    border-radius: 10px; /* Kavisli kenarlar (İlk sayfa ile aynı yapıldı) */
+    cursor: pointer;
     font-size: 16px; /* Yazı boyutu */
-    color: white; /* Yazı rengi */
-    background-color: #007bff; /* Buton arka plan rengi */
-    border: none; /* Kenar boşluğu yok */
-    border-radius: 5px; /* Kenar yuvarlama */
-    margin: 10px 0; /* Butonlar arası dikey boşluk */
-    cursor: pointer; /* Fare ile üzerine gelindiğinde el simgesi */
-    transition: background-color 0.3s ease; /* Hover geçiş efekti */
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Geçiş efektleri */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    border: 2px solid #ccc; /* Dış siyah kontur */
     font-family: 'montserrat'; /* Buton yazı tipi */
-    white-space: nowrap; /* Yazının tek satırda görünmesi için */
 }
 
 .button:hover {
-    background-color: #0056b3; /* Hover rengi */
+    background-color: #ffdac8; /* Hover rengi */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Hover'da gölge artışı */
 }
 
-.download-text {
-    font-size: 12px; /* Yazı boyutu küçük */
-    margin: 5px 0; /* Yazılar arası boşluk az */
-    text-align: center; /* Metni ortalama */
-}
-
+/* Copyright Metni */
 .copyright-text {
-    text-align: center; /* Copyright metnini ortalama */
-    margin-top: 20px; /* Üstte biraz boşluk */
+    text-align: center;
+    margin-top: 20px;
 }
 
 .copyright-text > p {
-    margin-bottom: 0; /* Alt boşluk yok */
-    font-family: 'sequel'; /* Copyright metni yazı tipi */
+    margin-bottom: 0;
+    font-family: 'sequel';
 }
 
-/* Medya Sorguları ile Mobil ve Bilgisayar Görünümü Ayarlamaları */
+/* Medya Sorguları */
 @media (max-width: 768px) {
     .button-container {
-        flex-direction: column; /* Mobilde butonları dikey dizme */
-        align-items: center; /* Dikeyde butonları ortalama */
+        flex-direction: column;
+        align-items: center;
     }
     .button {
-        white-space: normal; /* Yazının iki satırda görünmesine izin ver */
-        line-height: 1.2; /* Satırlar arası boşluk */
-        width: 90%; /* Mobilde buton genişliğini artırma */
-        max-width: none; /* Mobilde maksimum genişliği kaldırma */
-        margin: 10px 0; /* Mobilde butonlar arası dikey boşluk */
+        white-space: normal;
+        line-height: 1.2;
+        width: 90%;
+        max-width: none;
+        margin: 10px 0;
     }
 }
 
 @media (min-width: 769px) {
     .button {
-        /* Bilgisayarda butonların genişliğini otomatik ayarlama */
-        width: auto; /* Genişliği otomatik ayarla */
-        max-width: none; /* Maksimum genişliği kaldırma */
+        width: auto;
+        max-width: none;
     }
     .download-text {
-        margin-top: 5px; /* Butonların hemen altında yer alması için üst boşluk */
+        margin-top: 5px;
     }
+}
+
+/* SVG Animasyonları için Stil (Opsiyonel) */
+svg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 150px;
 }

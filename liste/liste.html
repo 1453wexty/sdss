@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buton ve Arama Çubuğu</title>
+    <link rel="stylesheet" href="liste.css">
+</head>
+<body>
+    <header>
+        <div class="isim">Site Adı</div>
+        <input type="text" id="searchInput" class="search-bar" placeholder="Bir şeyler arayabilirsin :)" onkeyup="filterButtons()">
+        <div class="header-buttons">
+            <a href="#" class="header-button">Buton 1</a>
+            <a href="#" class="header-button">Buton 2</a>
+        </div>
+    </header>
+    
+    <div class="container content">
+        <p>Mesela, "2.11.2024 ödevleri" diye arat.</p>
+
+        <ul class="button-list" id="buttonList">
+            <li><a href="../icerikler/icerik1.html" class="button">Tarih 1. Dönem 1. Yazılı Örnek Soruları</a></li>
+            <!-- Diğer butonlar buraya eklenebilir -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
